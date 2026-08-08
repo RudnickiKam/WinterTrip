@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Winter Trip Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+  />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Winter Trip Planner</h1>
+    <p>Choose a trip and compare resort costs, accommodation, and travel details.</p>
+  </header>
+
+  <main class="content">
+    <section class="trip-selector">
+      <label for="trip-select">Select trip:</label>
+      <select id="trip-select">
+        <option value="">Loading trips...</option>
+      </select>
+      <p id="trip-description" class="trip-description"></p>
+    </section>
+
+    <section class="summary-cards" id="destinations">
+      <!-- Destination cards will be inserted here -->
+    </section>
+
+    <section class="cost-controls">
+      <h2>Cost calculator</h2>
+      <div id="destination-toggle" class="destination-toggle"></div>
+      <div class="control-row">
+        <label for="days-range">Days: <span id="days-value">4</span></label>
+        <input id="days-range" type="range" min="2" max="10" value="4" />
+      </div>
+      <div class="control-row">
+        <label for="people-count">People:</label>
+        <input id="people-count" type="number" min="1" value="2" />
+      </div>
+      <div id="equipment-options">
+        <!-- Equipment options are loaded for the selected trip -->
+      </div>
+      <div class="total-summary">
+        <p>Total per person: <strong id="total-per-person">-</strong></p>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <h2>Resort map</h2>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "trip-winter-weekend",
+    "title": "Winter weekend in Karpacz",
+    "description": "Short winter break for 4 days in Karpacz with accommodation suggestions and resort info.",
+    "destinationIds": ["karpacz"],
+    "defaultDays": 4,
+    "defaultPeople": 2
+  },
+  {
+    "id": "trip-new-year",
+    "title": "New Year in Szklarska Poręba",
+    "description": "A longer trip with sport options and several lodging choices near the slopes.",
+    "destinationIds": ["szklarska"],
+    "defaultDays": 7,
+    "defaultPeople": 3
+  },
+  {
+    "id": "trip-south-north-weekend",
+    "title": "Multi-resort weekend",
+    "description": "Visit both Karpacz and Szklarska Poręba for a varied ski weekend.",
+    "destinationIds": ["karpacz", "szklarska"],
+    "defaultDays": 5,
+    "defaultPeople": 4
+  }
+]

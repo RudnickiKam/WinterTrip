@@ -1,0 +1,90 @@
+[
+  {
+    "id": "karpacz",
+    "name": "Karpacz",
+    "country": "Poland",
+    "distanceKm": 140,
+    "summary": "Family-friendly resort with gentle slopes and nice village atmosphere.",
+    "coordinates": [50.7761, 15.7732],
+    "skipassCostPerDay": 120,
+    "fuelCostEstimate": 80,
+    "notes": "Easy slopes, good for families and beginners with a pleasant town atmosphere.",
+    "equipmentOptions": [
+      { "id": "ski-rent", "name": "Ski rental", "pricePerDay": 70 },
+      { "id": "board-rent", "name": "Snowboard rental", "pricePerDay": 90 }
+    ],
+    "resortMapLink": "https://www.snow-forecast.com/resorts/Karpacz/maps",
+    "accommodations": [
+      {
+        "name": "Mountain View Apartment",
+        "pricePerNightPerPerson": 160,
+        "link": "https://example.com/booking/karpacz-apartment",
+        "description": "Compact apartment minutes from the slopes; great for groups and easy access.",
+        "coordinates": [50.7772, 15.7710]
+      },
+      {
+        "name": "Comfort Hotel",
+        "pricePerNightPerPerson": 200,
+        "link": "https://example.com/booking/karpacz-hotel",
+        "description": "Comfort hotel with spa facilities and breakfast included.",
+        "coordinates": [50.7750, 15.7788]
+      }
+    ],
+    "skiLifts": [
+      {
+        "name": "Wyciąg Kolorowa",
+        "coordinates": [50.7802, 15.7737],
+        "description": "Popular lift serving beginner and intermediate slopes."
+      },
+      {
+        "name": "Wyciąg Biały Jar",
+        "coordinates": [50.7675, 15.7644],
+        "description": "A fast lift with access to higher mountain trails."
+      }
+    ]
+  },
+  {
+    "id": "szklarska",
+    "name": "Szklarska Poręba",
+    "country": "Poland",
+    "distanceKm": 145,
+    "summary": "Classic mountain resort close to slopes and good nightlife.",
+    "coordinates": [50.8283, 15.4885],
+    "skipassCostPerDay": 135,
+    "fuelCostEstimate": 85,
+    "notes": "Popular resort with nightlife, sport shops, and scenic mountain trails.",
+    "equipmentOptions": [
+      { "id": "ski-rent", "name": "Ski rental", "pricePerDay": 75 },
+      { "id": "board-rent", "name": "Snowboard rental", "pricePerDay": 95 }
+    ],
+    "resortMapLink": "https://www.snow-forecast.com/resorts/Szklarska-Poreba/maps",
+    "accommodations": [
+      {
+        "name": "Cozy Chalet",
+        "pricePerNightPerPerson": 170,
+        "link": "https://example.com/booking/szklarska-chalet",
+        "description": "Chalet close to the village center with a rustic sauna and mountain view.",
+        "coordinates": [50.8291, 15.4890]
+      },
+      {
+        "name": "Snowview Hotel",
+        "pricePerNightPerPerson": 210,
+        "link": "https://example.com/booking/szklarska-hotel",
+        "description": "Modern hotel with easy slope access and ski storage.",
+        "coordinates": [50.8302, 15.4905]
+      }
+    ],
+    "skiLifts": [
+      {
+        "name": "Ski Lift Polana",
+        "coordinates": [50.8295, 15.4880],
+        "description": "A convenient lift near the central resort area."
+      },
+      {
+        "name": "Ski Lift Orlinek",
+        "coordinates": [50.8278, 15.4922],
+        "description": "A longer lift that reaches the upper slope network."
+      }
+    ]
+  }
+]
