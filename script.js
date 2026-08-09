@@ -2,8 +2,12 @@ const tripSelect = document.getElementById("trip-select");
 const tripDescription = document.getElementById("trip-description");
 const destinationsContainer = document.getElementById("destinations");
 const destinationToggleContainer = document.getElementById("destination-toggle");
-const daysRange = document.getElementById("days-range");
-const daysValue = document.getElementById("days-value");
+const accommodationDaysRange = document.getElementById("accommodation-days-range");
+const accommodationDaysValue = document.getElementById("accommodation-days-value");
+const accommodationPricePerPerson = document.getElementById("accommodation-price-per-person");
+const skiDaysRange = document.getElementById("ski-days-range");
+const skiDaysValue = document.getElementById("ski-days-value");
+const skiPricePerPerson = document.getElementById("ski-price-per-person");
 const peopleCount = document.getElementById("people-count");
 const equipmentContainer = document.getElementById("equipment-options");
 const totalPerPerson = document.getElementById("total-per-person");
@@ -62,8 +66,10 @@ function selectTrip(tripId) {
   if (!selectedTrip) return;
   selectedDestinationId = selectedTrip.destinationIds[0] || null;
   tripDescription.textContent = selectedTrip.description;
-  daysRange.value = selectedTrip.defaultDays;
-  daysValue.textContent = selectedTrip.defaultDays;
+  accommodationDaysRange.value = selectedTrip.defaultDays;
+  accommodationDaysValue.textContent = selectedTrip.defaultDays;
+  skiDaysRange.value = selectedTrip.defaultDays;
+  skiDaysValue.textContent = selectedTrip.defaultDays;
   peopleCount.value = selectedTrip.defaultPeople;
   renderDestinations();
   renderDestinationToggle();
@@ -122,8 +128,11 @@ function renderDestinationToggle() {
 }
 
 function createDestinationCard(destination) {
+  const stayDays = Number(accommodationDaysRange.value);
   const accommodationsHtml = destination.accommodations
-    .map((item, index) => `
+    .map((item, index) => {
+      const accommodationRate = item.accommodationRates?.[String(stayDays)] ?? 0;
+      return `
       <li class="accommodation-row">
         <div class="accommodation-choice">
           <label>
@@ -135,11 +144,12 @@ function createDestinationCard(destination) {
             />
             <span class="accommodation-name">${item.name}</span>
           </label>
-          <span class="accommodation-price">${item.pricePerNightPerPerson} PLN / night</span>
+          <span class="accommodation-price" data-destination-id="${destination.id}" data-accommodation-index="${index}">${accommodationRate} PLN / stay</span>
           <a class="accommodation-link" href="${item.link}" target="_blank" rel="noopener">Book</a>
         </div>
         <p class="accommodation-description">${item.description || "Short accommodation description will appear here."}</p>
-      </li>`)
+      </li>`;
+    })
     .join("");
 
   return `
@@ -164,6 +174,21 @@ function attachAccommodationListeners() {
   );
   accommodationInputs.forEach((input) => {
     input.addEventListener("change", updateTotals);
+  });
+}
+
+function updateAccommodationPriceLabels() {
+  const stayDays = Number(accommodationDaysRange.value);
+  const priceLabels = document.querySelectorAll(
+    '.accommodation-price[data-destination-id][data-accommodation-index]'
+  );
+
+  priceLabels.forEach((label) => {
+    const destinationId = label.dataset.destinationId;
+    const index = Number(label.dataset.accommodationIndex);
+    const destination = destinations.find((dest) => dest.id === destinationId);
+    const rate = destination?.accommodations?.[index]?.accommodationRates?.[String(stayDays)] ?? 0;
+    label.textContent = `${rate} PLN / stay`;
   });
 }
 
@@ -226,12 +251,13 @@ function getSelectedEquipmentCost() {
 }
 
 function getSelectedAccommodationCost(destination) {
+  const stayDays = Number(accommodationDaysRange.value);
   const selectedInput = document.querySelector(
     `input[name="accommodation-${destination.id}"]:checked`
   );
   const selectedIndex = Number(selectedInput?.value ?? 0);
-  return destination.accommodations[selectedIndex]?.pricePerNightPerPerson ||
-    destination.accommodations[0]?.pricePerNightPerPerson ||
+  return destination.accommodations[selectedIndex]?.accommodationRates?.[String(stayDays)] ||
+    destination.accommodations[0]?.accommodationRates?.[String(stayDays)] ||
     0;
 }
 
@@ -256,9 +282,11 @@ function getActiveDestinations() {
 }
 
 function updateTotals() {
-  const days = Number(daysRange.value);
+  const accommodationDays = Number(accommodationDaysRange.value);
+  const skiDays = Number(skiDaysRange.value);
   const people = Math.max(1, Number(peopleCount.value));
-  daysValue.textContent = days;
+  accommodationDaysValue.textContent = accommodationDays;
+  skiDaysValue.textContent = skiDays;
 
   const chosenDestinations = getActiveDestinations();
 
@@ -268,28 +296,41 @@ function updateTotals() {
   }
 
   const accommodationTotal = chosenDestinations.reduce(
-    (sum, destination) => sum + getSelectedAccommodationCost(destination) * days,
+    (sum, destination) => sum + getSelectedAccommodationCost(destination),
     0
   );
 
-  const skipassTotal = chosenDestinations.reduce(
-    (sum, destination) => sum + destination.skipassCostPerDay * days,
-    0
-  );
+  const skipassPerPersonTotal = chosenDestinations.reduce((sum, destination) => {
+    const rate = destination.skipassRates?.[String(skiDays)];
+    return sum + (rate?.pricePln ?? destination.skipassCostPerDay * skiDays);
+  }, 0);
 
   const fuelTotal = chosenDestinations.reduce(
     (sum, destination) => sum + destination.fuelCostEstimate,
     0
   );
 
-  const equipmentTotal = getSelectedEquipmentCost() * days;
+  const equipmentPerPersonTotal = getSelectedEquipmentCost() * skiDays;
 
-  const groupTotal = accommodationTotal + skipassTotal + equipmentTotal + fuelTotal;
-  const perPerson = Math.round(groupTotal / people);
+  const accommodationPerPerson = Math.round(accommodationTotal / people);
+  const skiPerPerson = Math.round(skipassPerPersonTotal);
+  accommodationPricePerPerson.textContent = `${accommodationPerPerson} PLN / person`;
+  skiPricePerPerson.textContent = `${skiPerPerson} PLN / person`;
+
+  const perPerson = Math.round(
+    accommodationTotal / people +
+      skipassPerPersonTotal +
+      equipmentPerPersonTotal +
+      fuelTotal / people
+  );
   totalPerPerson.textContent = `${perPerson} PLN`;
 }
 
-daysRange.addEventListener("input", updateTotals);
+accommodationDaysRange.addEventListener("input", () => {
+  updateTotals();
+  updateAccommodationPriceLabels();
+});
+skiDaysRange.addEventListener("input", updateTotals);
 peopleCount.addEventListener("input", updateTotals);
 
 function updateMap() {
@@ -308,12 +349,14 @@ function updateMap() {
 
   const bounds = [];
   chosenDestinations.forEach((destination) => {
-    const resortMarker = L.marker(destination.coordinates)
-      .addTo(map)
-      .bindPopup(`<strong>${destination.name}</strong><br>${destination.summary}`);
+    if (destination.coordinates && Array.isArray(destination.coordinates)) {
+      const resortMarker = L.marker(destination.coordinates)
+        .addTo(map)
+        .bindPopup(`<strong>${destination.name}</strong><br>${destination.summary}`);
 
-    markers.push(resortMarker);
-    bounds.push(destination.coordinates);
+      markers.push(resortMarker);
+      bounds.push(destination.coordinates);
+    }
 
     destination.skiLifts?.forEach((lift) => {
       if (lift.coordinates) {

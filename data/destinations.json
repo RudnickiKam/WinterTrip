@@ -1,90 +1,548 @@
 [
   {
-    "id": "karpacz",
-    "name": "Karpacz",
-    "country": "Poland",
-    "distanceKm": 140,
-    "summary": "Family-friendly resort with gentle slopes and nice village atmosphere.",
-    "coordinates": [50.7761, 15.7732],
-    "skipassCostPerDay": 120,
-    "fuelCostEstimate": 80,
-    "notes": "Easy slopes, good for families and beginners with a pleasant town atmosphere.",
-    "equipmentOptions": [
-      { "id": "ski-rent", "name": "Ski rental", "pricePerDay": 70 },
-      { "id": "board-rent", "name": "Snowboard rental", "pricePerDay": 90 }
+    "id": "janskie",
+    "name": "Jánské Lázně",
+    "country": "Czechia",
+    "distanceKm": 135,
+    "summary": "Major ski resort in the Krkonoše (Giant Mountains), forming part of the SkiResort ČERNÁ HORA - PEC complex with modern gondola lifts and varied terrain.",
+    "coordinates": [
+      50.6308,
+      15.7781
     ],
-    "resortMapLink": "https://www.snow-forecast.com/resorts/Karpacz/maps",
-    "accommodations": [
+    "skipassCostPerDay": 212,
+    "skipassRates": {
+      "1": {
+        "pricePln": 212,
+        "priceRangePln": "195-229"
+      },
+      "2": {
+        "pricePln": 443,
+        "priceRangePln": "371-515"
+      },
+      "3": {
+        "pricePln": 593,
+        "priceRangePln": "549-637"
+      },
+      "4": {
+        "pricePln": 765,
+        "priceRangePln": "708-823"
+      },
+      "5": {
+        "pricePln": 921,
+        "priceRangePln": "850-991"
+      },
+      "6": {
+        "pricePln": 1054,
+        "priceRangePln": "974-1133"
+      }
+    },
+    "fuelCostEstimate": 140,
+    "notes": "Prices in PLN (converted from CZK where applicable: 1 CZK ≈ 0.177 PLN). Shortest drive from Wrocław, ideal for weekend trips.",
+    "equipmentOptions": [
       {
-        "name": "Mountain View Apartment",
-        "pricePerNightPerPerson": 160,
-        "link": "https://example.com/booking/karpacz-apartment",
-        "description": "Compact apartment minutes from the slopes; great for groups and easy access.",
-        "coordinates": [50.7772, 15.7710]
+        "id": "ski-rent",
+        "name": "Ski rental",
+        "pricePerDay": 69.13
       },
       {
-        "name": "Comfort Hotel",
-        "pricePerNightPerPerson": 200,
-        "link": "https://example.com/booking/karpacz-hotel",
-        "description": "Comfort hotel with spa facilities and breakfast included.",
-        "coordinates": [50.7750, 15.7788]
+        "id": "board-rent",
+        "name": "Snowboard rental",
+        "pricePerDay": 69.13
       }
     ],
+    "resortMapLink": "https://www.skiresort.cz/pl/skiarealy/cerna-hora/",
     "skiLifts": [
       {
-        "name": "Wyciąg Kolorowa",
-        "coordinates": [50.7802, 15.7737],
-        "description": "Popular lift serving beginner and intermediate slopes."
+        "name": "Černohorský Express",
+        "coordinates": [
+          50.63,
+          15.7747
+        ],
+        "description": "An 8-seater gondola cable car connecting Jánské Lázně directly to the summit of Černá hora (1260 m)."
+      }
+    ],
+    "accommodations": [
+      {
+        "name": "Apartmán 254",
+        "link": "https://www.booking.com/Share-pt1bN4x",
+        "description": "Jańskie Łaźnie, tani i blisko do wyciągów. Większoć w okolicy sporo droższa",
+        "coordinates": [
+          50.633244704708936, 15.7696466690822
+        ],
+        "accommodationRates": {
+          "2": 2137420.0,
+          "3": 1323.0,
+          "4": 1763.0,
+          "5": 2204.0,
+          "6": 2746.0,
+          "7": 3105.0
+        }
       },
       {
-        "name": "Wyciąg Biały Jar",
-        "coordinates": [50.7675, 15.7644],
-        "description": "A fast lift with access to higher mountain trails."
+        "name": "Apartmán V Srdci Pece",
+        "link": "https://www.booking.com/Share-Si3yHC",
+        "description": "Pec pod Snieżką, Większoć w okolicy sporo droższa",
+        "coordinates": [
+          50.69630974930382, 15.737462758639522
+        ],
+        "accommodationRates": {
+          "2": 2137420.0,
+          "3": 1422.0,
+          "4": 2153.0,
+          "5": 2884.0,
+          "6": 3615.0,
+          "7": 4346.0
+        }
       }
+
+    ],
+    "sources": [
+      "https://www.skiresort.cz/en/",
+      "https://www.onthesnow.co.uk/krkonose/cerna-hora-janske-lazne/skipass",
+      "https://www.etc-sport.cz/en/rental-depot-shop/rental/prices-janske-lazne/"
     ]
   },
   {
-    "id": "szklarska",
-    "name": "Szklarska Poręba",
-    "country": "Poland",
-    "distanceKm": 145,
-    "summary": "Classic mountain resort close to slopes and good nightlife.",
-    "coordinates": [50.8283, 15.4885],
-    "skipassCostPerDay": 135,
-    "fuelCostEstimate": 85,
-    "notes": "Popular resort with nightlife, sport shops, and scenic mountain trails.",
-    "equipmentOptions": [
-      { "id": "ski-rent", "name": "Ski rental", "pricePerDay": 75 },
-      { "id": "board-rent", "name": "Snowboard rental", "pricePerDay": 95 }
+    "id": "chopok",
+    "name": "Jasná Nízke Tatry (Chopok)",
+    "country": "Slovakia",
+    "distanceKm": 443,
+    "summary": "The largest ski resort in Slovakia, offering over 50 km of slopes across the north and south faces of Mt. Chopok in the Low Tatras.",
+    "coordinates": [
+      48.9437,
+      19.5852
     ],
-    "resortMapLink": "https://www.snow-forecast.com/resorts/Szklarska-Poreba/maps",
-    "accommodations": [
+    "skipassCostPerDay": 271,
+    "skipassRates": {
+      "1": {
+        "pricePln": 271,
+        "priceRangePln": "225-317"
+      },
+      "2": {
+        "pricePln": 575,
+        "priceRangePln": "437-713"
+      },
+      "3": {
+        "pricePln": 748,
+        "priceRangePln": "644-851"
+      },
+      "4": {
+        "pricePln": 954,
+        "priceRangePln": "828-1081"
+      },
+      "5": {
+        "pricePln": 1138,
+        "priceRangePln": "989-1288"
+      },
+      "6": {
+        "pricePln": 1299,
+        "priceRangePln": "1127-1472"
+      }
+    },
+    "fuelCostEstimate": 380,
+    "notes": "Flexible dynamic pricing via Gopass system; purchasing online in advance yields lower prices. Direct drive via A4 and Polish/Slovak border crossings.",
+    "equipmentOptions": [
       {
-        "name": "Cozy Chalet",
-        "pricePerNightPerPerson": 170,
-        "link": "https://example.com/booking/szklarska-chalet",
-        "description": "Chalet close to the village center with a rustic sauna and mountain view.",
-        "coordinates": [50.8291, 15.4890]
+        "id": "ski-rent",
+        "name": "Ski rental",
+        "pricePerDay": 82.0
       },
       {
-        "name": "Snowview Hotel",
-        "pricePerNightPerPerson": 210,
-        "link": "https://example.com/booking/szklarska-hotel",
-        "description": "Modern hotel with easy slope access and ski storage.",
-        "coordinates": [50.8302, 15.4905]
+        "id": "board-rent",
+        "name": "Snowboard rental",
+        "pricePerDay": 82.0
       }
     ],
+    "resortMapLink": "https://www.jasna.sk/en/resort/resort-info/winter-in-jasna-1",
     "skiLifts": [
       {
-        "name": "Ski Lift Polana",
-        "coordinates": [50.8295, 15.4880],
-        "description": "A convenient lift near the central resort area."
+        "name": "Biela Púť - Priehyba Gondola",
+        "coordinates": [
+          48.9709,
+          19.5843
+        ],
+        "description": "Modern 15-person cable car serving as the primary hub for accessing the northern side slopes."
+      }
+    ],
+    "accommodations": [
+      {
+        "name": "Chata DOBROTKA",
+        "link": "https://www.booking.com/Share-FIu8zz",
+        "description": "Domek na wyłączność, trzeba podjechać autem, ale blisko do wyciągów. Można szuakć coś taniej w okolicy",
+        "coordinates": [
+         49.0628634185725, 19.58134830328731
+        ],
+        "accommodationRates": {
+          "2": 2137420.0,
+          "3": 2137420.0,
+          "4": 2279.0,
+          "5": 2849.0,
+          "6": 3651.0,
+          "7": 4453.0
+        }
+      }
+    ],
+    "sources": [
+      "https://www.jasna.sk/en/",
+      "https://www.gopass.se/en/"
+    ]
+  },
+  {
+    "id": "wildkogel",
+    "name": "Wildkogel-Arena (Neukirchen)",
+    "country": "Austria",
+    "distanceKm": 786,
+    "summary": "Family-friendly resort in the Salzburg region between the Kitzbühel Alps and the Hohe Tauern, featuring one of the world's longest illuminated toboggan runs (14 km).",
+    "coordinates": [
+      47.2543,
+      12.2808
+    ],
+    "skipassCostPerDay": 299,
+    "skipassRates": {
+      "1": {
+        "pricePln": 299,
+        "priceRangePln": "290-308"
+      },
+      "2": {
+        "pricePln": 598,
+        "priceRangePln": "529-667"
+      },
+      "3": {
+        "pricePln": 810,
+        "priceRangePln": "782-837"
+      },
+      "4": {
+        "pricePln": 1024,
+        "priceRangePln": "989-1058"
+      },
+      "5": {
+        "pricePln": 1219,
+        "priceRangePln": "1173-1265"
+      },
+      "6": {
+        "pricePln": 1392,
+        "priceRangePln": "1334-1449"
+      }
+    },
+    "fuelCostEstimate": 680,
+    "notes": "Requires Austrian highway vignette. High altitude guarantees good snow reliability from December to spring.",
+    "equipmentOptions": [
+      {
+        "id": "ski-rent",
+        "name": "Ski rental",
+        "pricePerDay": 115.0
       },
       {
-        "name": "Ski Lift Orlinek",
-        "coordinates": [50.8278, 15.4922],
-        "description": "A longer lift that reaches the upper slope network."
+        "id": "board-rent",
+        "name": "Snowboard rental",
+        "pricePerDay": 115.0
       }
+    ],
+    "resortMapLink": "https://www.wildkogel-arena.at/en/mountain-lifts-wildkogel/facilities-slopes.html",
+    "skiLifts": [
+      {
+        "name": "Wildkogelbahn",
+        "coordinates": [
+          47.2543,
+          12.2808
+        ],
+        "description": "Gondola cable car operating directly from Neukirchen am Großvenediger up to 2,100 m."
+      }
+    ],
+    "accommodations": [
+      {
+        "name": "Chalet Bramberg near Ski Slopes",
+        "link": "https://www.booking.com/Share-fxtCYmt",
+        "description": "Najtaniej co się dało znaleźć, ale blisko do wyciągów.",
+        "coordinates": [
+          47.28031523840139, 12.380207443231832
+        ],
+        "accommodationRates": {
+          "2": 2137420.0,
+          "3": 2137420.0,
+          "4": 2137420.0,
+          "5": 2137420.0,
+          "6": 2137420.0,
+          "7": 5319.0
+        }
+      },
+      {
+        "name": "Bauernhaus Heisenbauer",
+        "link": "https://www.booking.com/Share-mUyFCeE",
+        "description": "Najtaniej co się dało znaleźć, ale blisko do wyciągów.",
+        "coordinates": [
+          47.253614959353804, 12.259421316863872
+        ],
+        "accommodationRates": {
+          "2": 2137420.0,
+          "3": 2137420.0,
+          "4": 2137420.0,
+          "5": 2137420.0,
+          "6": 2137420.0,
+          "7": 5027.0
+        }
+      }
+    ],
+    "sources": [
+      "https://www.wildkogel-arena.at/en/",
+      "https://www.bergbahnen-wildkogel.at/en/"
+    ]
+  },
+  {
+    "id": "serfaus",
+    "name": "Serfaus-Fiss-Ladis",
+    "country": "Austria",
+    "distanceKm": 849,
+    "summary": "Premium Tyrol ski arena with 214 km of slopes, exceptional family facilities, modern lift infrastructure, and an underground hover-rail in Serfaus village.",
+    "coordinates": [
+      47.039,
+      10.6078
+    ],
+    "skipassCostPerDay": 334,
+    "skipassRates": {
+      "1": {
+        "pricePln": 334,
+        "priceRangePln": "322-345"
+      },
+      "2": {
+        "pricePln": 656,
+        "priceRangePln": "603-708"
+      },
+      "3": {
+        "pricePln": 943,
+        "priceRangePln": "911-975"
+      },
+      "4": {
+        "pricePln": 1192,
+        "priceRangePln": "1150-1233"
+      },
+      "5": {
+        "pricePln": 1417,
+        "priceRangePln": "1371-1463"
+      },
+      "6": {
+        "pricePln": 1610,
+        "priceRangePln": "1555-1665"
+      }
+    },
+    "fuelCostEstimate": 730,
+    "notes": "Car-free village center in Serfaus with free underground Dorfbahn transport for guests.",
+    "equipmentOptions": [
+      {
+        "id": "ski-rent",
+        "name": "Ski rental",
+        "pricePerDay": 135.0
+      },
+      {
+        "id": "board-rent",
+        "name": "Snowboard rental",
+        "pricePerDay": 135.0
+      }
+    ],
+    "resortMapLink": "https://www.serfaus-fiss-ladis.at/en/Winter-holiday/Piste-map",
+    "skiLifts": [
+      {
+        "name": "Komperdellbahn",
+        "coordinates": [
+          47.0382,
+          10.6033
+        ],
+        "description": "10-passenger gondola lift running from Serfaus valley station to the central Komperdell plateau."
+      }
+    ],
+    "accommodations": [
+      {
+        "name": "Hotel Bär",
+        "link": "https://www.baer-post.at/",
+        "description": "Luxury family hotel located in central Serfaus close to the Dorfbahn station.",
+        "coordinates": [
+          47.0378,
+          10.6065
+        ],
+        "accommodationRates": {
+          "2": 4800.0,
+          "3": 7200.0,
+          "4": 9600.0,
+          "5": 12000.0,
+          "6": 14400.0,
+          "7": 16800.0
+        }
+      }
+    ],
+    "sources": [
+      "https://www.serfaus-fiss-ladis.at/en/"
+    ]
+  },
+  {
+    "id": "livigno",
+    "name": "Livigno",
+    "country": "Italy",
+    "distanceKm": 1038,
+    "summary": "Duty-free high-altitude paradise in the Italian Alps offering extensive snowparks, broad sunny slopes on Mottolino and Carosello 3000 sides, and vibrant après-ski.",
+    "coordinates": [
+      46.5382,
+      10.1375
+    ],
+    "skipassCostPerDay": 287,
+    "skipassRates": {
+      "1": {
+        "pricePln": 287,
+        "priceRangePln": "276-299"
+      },
+      "2": {
+        "pricePln": 590,
+        "priceRangePln": "543-636"
+      },
+      "3": {
+        "pricePln": 794,
+        "priceRangePln": "759-828"
+      },
+      "4": {
+        "pricePln": 1012,
+        "priceRangePln": "966-1058"
+      },
+      "5": {
+        "pricePln": 1201,
+        "priceRangePln": "1150-1251"
+      },
+      "6": {
+        "pricePln": 1369,
+        "priceRangePln": "1311-1426"
+      }
+    },
+    "fuelCostEstimate": 880,
+    "notes": "Duty-free zone with lower fuel and shopping prices. Tunnel Munt la Schera toll applies when arriving via Switzerland.",
+    "equipmentOptions": [
+      {
+        "id": "ski-rent",
+        "name": "Ski rental",
+        "pricePerDay": 110.0
+      },
+      {
+        "id": "board-rent",
+        "name": "Snowboard rental",
+        "pricePerDay": 110.0
+      }
+    ],
+    "resortMapLink": "https://www.skipasslivigno.com/pl/mapy/",
+    "skiLifts": [
+      {
+        "name": "Mottolino Gondola",
+        "coordinates": [
+          46.5387,
+          10.1388
+        ],
+        "description": "Key gondola accessing the Mottolino snowpark and expansive eastern ridge pistes."
+      }
+    ],
+    "accommodations": [
+      {
+        "name": "Hotel Lac Salin Spa & Mountain Resort",
+        "link": "https://www.lacsalin.com/",
+        "description": "Upscale resort offering direct access to slopes and extensive spa wellness facilities.",
+        "coordinates": [
+          46.5298,
+          10.1291
+        ],
+        "accommodationRates": {
+          "2": 4200.0,
+          "3": 6300.0,
+          "4": 8400.0,
+          "5": 10500.0,
+          "6": 12600.0,
+          "7": 14700.0
+        }
+      }
+    ],
+    "sources": [
+      "https://www.livigno.eu/en/",
+      "https://www.mottolino.com/en/"
+    ]
+  },
+  {
+    "id": "kronplatz",
+    "name": "Kronplatz (Plan de Corones)",
+    "country": "Italy",
+    "distanceKm": 948,
+    "summary": "South Tyrol's premier ski mountain, part of Dolomiti Superski, famous for 360-degree panoramic views, state-of-the-art gondolas, and the steep 'Black Five' runs.",
+    "coordinates": [
+      46.7386,
+      11.9576
+    ],
+    "skipassCostPerDay": 354,
+    "skipassRates": {
+      "1": {
+        "pricePln": 354,
+        "priceRangePln": "340-368"
+      },
+      "2": {
+        "pricePln": 690,
+        "priceRangePln": "653-727"
+      },
+      "3": {
+        "pricePln": 1007,
+        "priceRangePln": "966-1049"
+      },
+      "4": {
+        "pricePln": 1256,
+        "priceRangePln": "1205-1306"
+      },
+      "5": {
+        "pricePln": 1461,
+        "priceRangePln": "1403-1518"
+      },
+      "6": {
+        "pricePln": 1656,
+        "priceRangePln": "1587-1725"
+      }
+    },
+    "fuelCostEstimate": 810,
+    "notes": "Part of the world-largest Dolomiti Superski network. Excellent train connection directly to the valley lift station at Perca (Percha).",
+    "equipmentOptions": [
+      {
+        "id": "ski-rent",
+        "name": "Ski rental",
+        "pricePerDay": 125.0
+      },
+      {
+        "id": "board-rent",
+        "name": "Snowboard rental",
+        "pricePerDay": 125.0
+      }
+    ],
+    "resortMapLink": "https://www.kronplatz.com/en/the-kronplatz/skilifts-slopes/ski-lifts-winter",
+    "skiLifts": [
+      {
+        "name": "Kronplatz 2000",
+        "coordinates": [
+          46.7681,
+          11.9542
+        ],
+        "description": "High-capacity 10-seater gondola climbing from Riscone (Reischach) to the summit plateau."
+      }
+    ],
+    "accommodations": [
+      {
+        "name": "Hotel B&B DAFNE",
+        "link": "https://www.hotel-dafne.it/",
+        "description": "Comfortable bed & breakfast located in Riscone near the main Kronplatz cable cars.",
+        "coordinates": [
+          46.7712,
+          11.952
+        ],
+        "accommodationRates": {
+          "2": 2900.0,
+          "3": 4350.0,
+          "4": 5800.0,
+          "5": 7250.0,
+          "6": 8700.0,
+          "7": 10150.0
+        }
+      }
+    ],
+    "sources": [
+      "https://www.kronplatz.com/en/",
+      "https://www.dolomitisuperski.com/en/"
     ]
   }
 ]
