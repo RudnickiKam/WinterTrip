@@ -12,6 +12,12 @@ const peopleCount = document.getElementById("people-count");
 const equipmentContainer = document.getElementById("equipment-options");
 const totalPerPerson = document.getElementById("total-per-person");
 
+// Feature flags: toggle these to enable/disable optional UI features
+const UI_FEATURES = {
+  banners: true, // show left/right vertical banners
+  popup: true // show image popup on page load
+};
+
 let trips = [];
 let destinations = [];
 let selectedTrip = null;
@@ -31,10 +37,41 @@ async function loadData() {
     initMap();
     renderTripSelector();
     selectTrip(trips[0]?.id);
+    initOptionalUI();
   } catch (error) {
     console.error("Failed to load data:", error);
     tripSelect.innerHTML = "<option>Error loading trips</option>";
     equipmentContainer.innerHTML = "<p>Unable to load equipment options.</p>";
+  }
+}
+
+function initOptionalUI() {
+  // Banners
+  if (!UI_FEATURES.banners) {
+    const left = document.getElementById('side-banner-left');
+    const right = document.getElementById('side-banner-right');
+    if (left) left.style.display = 'none';
+    if (right) right.style.display = 'none';
+  }
+
+  // Popup
+  const overlay = document.getElementById('image-popup-overlay');
+  const closeBtn = document.getElementById('image-popup-close');
+
+  if (!UI_FEATURES.popup) {
+    if (overlay) overlay.style.display = 'none';
+    return;
+  }
+
+  if (overlay) {
+    // show popup on initial load
+    overlay.setAttribute('aria-hidden', 'false');
+  }
+
+  if (closeBtn && overlay) {
+    closeBtn.addEventListener('click', () => overlay.setAttribute('aria-hidden', 'true'));
+    // clicking outside image closes popup
+    overlay.addEventListener('click', (ev) => { if (ev.target === overlay) overlay.setAttribute('aria-hidden', 'true'); });
   }
 }
 

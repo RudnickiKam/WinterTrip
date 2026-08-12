@@ -352,20 +352,19 @@
     ],
     "accommodations": [
       {
-        "name": "Hotel Bär",
-        "link": "https://www.baer-post.at/",
-        "description": "Luxury family hotel located in central Serfaus close to the Dorfbahn station.",
+        "name": "Haus Edelweiss",
+        "link": "https://www.booking.com/Share-wXwoJWX",
+        "description": "Trochę oddalony od wyciągów, ale w miarę blisko. Trzeba dojeżdżać autem, chociaż w tym Fendels też są jakieś wyciągi",
         "coordinates": [
-          47.0378,
-          10.6065
+         47.053423059407976, 10.67905783416922
         ],
         "accommodationRates": {
-          "2": 4800.0,
-          "3": 7200.0,
-          "4": 9600.0,
-          "5": 12000.0,
-          "6": 14400.0,
-          "7": 16800.0
+          "2": 2137420.0,
+          "3": 2137420.0,
+          "4": 2137420.0,
+          "5": 2137420.0,
+          "6": 2137420.0,
+          "7": 5882.0
         }
       }
     ],
@@ -523,20 +522,35 @@
     ],
     "accommodations": [
       {
-        "name": "Hotel B&B DAFNE",
-        "link": "https://www.hotel-dafne.it/",
-        "description": "Comfortable bed & breakfast located in Riscone near the main Kronplatz cable cars.",
+        "name": "Chalet Forciagn",
+        "link": "https://www.booking.com/Share-jW7rOYn",
+        "description": "",
         "coordinates": [
-          46.7712,
-          11.952
+          46.720669609915916, 11.895470953054454
         ],
         "accommodationRates": {
-          "2": 2900.0,
-          "3": 4350.0,
-          "4": 5800.0,
-          "5": 7250.0,
-          "6": 8700.0,
-          "7": 10150.0
+          "2": 2137420.0,
+          "3": 2137420.0,
+          "4": 2137420.0,
+          "5": 2137420.0,
+          "6": 2137420.0,
+          "7": 8234.0
+        }
+      },
+      {
+        "name": "Oberhölzlhof",
+        "link": "https://www.booking.com/Share-HsVO64",
+        "description": "",
+        "coordinates": [
+          46.756618891593014, 12.042933832540879
+        ],
+        "accommodationRates": {
+          "2": 2137420.0,
+          "3": 2137420.0,
+          "4": 2137420.0,
+          "5": 2137420.0,
+          "6": 2137420.0,
+          "7": 7801.0
         }
       }
     ],

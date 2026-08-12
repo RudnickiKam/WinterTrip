@@ -16,6 +16,20 @@
     <p>Choose a trip and compare resort costs, accommodation, and travel details.</p>
   </header>
 
+  <!-- Left / Right vertical banners -->
+  <aside id="side-banner-left" class="side-banner side-banner-left" aria-hidden="false">
+    <a href="#" class="banner-link">
+      <span class="banner-caption">Gorący narciarze w twojej okolicy!</span>
+      <img src="assets/skier.png" alt="Gorący narciarze w twojej okolicy" />
+    </a>
+  </aside>
+  <aside id="side-banner-right" class="side-banner side-banner-right" aria-hidden="false">
+    <a href="#" class="banner-link">
+      <span class="banner-caption">Gorący snowbordziści w twojej okolicy! Sprawdź!</span>
+      <img src="assets/snowboarder.png" alt="Gorący snowbordziści w twojej okolicy" />
+    </a>
+  </aside>
+
   <main class="content">
     <section class="trip-selector">
       <label for="trip-select">Select trip:</label>
@@ -59,6 +73,15 @@
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <!-- Image popup (appears on open) -->
+  <div id="image-popup-overlay" class="image-popup-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="image-popup">
+      <button id="image-popup-close" class="popup-close" aria-label="Close popup">×</button>
+      <div class="popup-caption">Szukasz kolegów do wspólnych zjazdów.<br>Jest ich wielu w twojej okolicy!<br>Sprawdź!</div>
+      <img src="assets/popup-photo.png" alt="Znajdź kolegów do wspólnej jazdy!" />
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
